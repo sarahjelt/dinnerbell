@@ -21,6 +21,7 @@ const MealSchema = new Schema({
   }
 });
 
-const Meal = mongoose.model('Meal', MealSchema);
+// creates model from above schema -- ADDING COLLECTION NAME TO END HERE MADE IT FINALLY FIND THE RIGHT COLLECTION
+var Meal = mongoose.model('Meal', MealSchema, 'Meal');
 
 module.exports = Meal;
