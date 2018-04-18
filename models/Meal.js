@@ -18,6 +18,14 @@ const MealSchema = new Schema({
   day: {
     type: String,
     required: false
+  },
+  image_url: {
+    type: String,
+    required: false
+  },
+  source_url: {
+    type: String,
+    required: true
   }
 });
 

@@ -5,15 +5,16 @@
   <title>Dinner Bell</title>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css'>
+  <link rel='stylesheet' href='../public/assets/css/style.css'>
 </head>
 
 <body>
   <header>
-    <nav class='red nav-wrapper'>
-      <a href="#" data-activates="mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    <nav class='transparent nav-wrapper'>
+      <a href="#" data-activates="mobile" class="button-collapse"><i class="material-icons black-text">menu</i></a>
       <ul id='nav-mobile' class='hide-on-med-and-down'>
         <li>
-          <a href='/'>there's</a>
+          <a href='/' title='Home'>there's</a>
         </li>
         <li>
           <a href='#'>still</a>
@@ -25,31 +26,36 @@
           <a href='#'>on my dinner jacket</a>
         </li>
         <li>
-          <a href='/saved'>'til the dinner bell rings</a>
+          <a href='/saved' title='Saved'>'til the dinner bell rings</a>
         </li>
       </ul>
       <ul class="side-nav" id="mobile">
-        <li><a href="#top">home</a></li>
-        <li><a href="#coding">coding portfolio</a></li>
-        <li><a href="#covers">book covers</a></li>
-        <li><a href="#about">about</a></li>
-        <li><a href="#contact">contact</a></li>
+        <li><a href="/" class='white-text'>there's</a></li>
+        <li class='white-text'><a href="#" class='white-text'>still</a></li>
+        <li class='white-text'><a href="#" class='white-text'>dinner</a></li>
+        <li class='white-text'><a href="#" class='white-text'>on my dinner jacket</a></li>
+        <li class='white-text'><a href="/saved" class='white-text'>'til the dinner bell rings</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <div>
-      <h1>Saved</h1>
-      <p>Saved meal ideas/recipes will go here</p>
-      <p>Eventually there'll be some kind of calendar view too</p>
+    <div class='container'>
+      <div>
+        <h1>Saved</h1>
+        <p>Eventually there'll be some kind of calendar view</p>
+      </div>
+      <div id='saved-recipes'>
+
+      </div>
     </div>
   </main>
 
-  <footer>
+  <footer class='page-footer black'>
     <div class="container">
       <div class="row">
         <p><span>Copyright &copy 2018</span></p>
+        <p>Powered by the <a href='http://food2fork.com/'>Food2Fork</a> API!</p>
       </div>
     </div>
   </footer>
@@ -58,6 +64,7 @@
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
+<script src='../public/assets/js/app.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js'></script>
 <script>
   $(document).ready(function(){

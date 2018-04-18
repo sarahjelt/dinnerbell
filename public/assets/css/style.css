@@ -1,3 +1,13 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
 input::-webkit-input-placeholder { /* WebKit browsers */
   color: red !important;
 }
@@ -15,22 +25,39 @@ li {
   background-color: black;
 }
 
-#tiles-go-here {
+a {
+  color: red;
+}
+
+a:hover {
+  color: aqua;
+}
+
+#tiles-go-here, #saved-recipes {
   display: grid;
   grid-gap: 50px;
   grid-template-columns: 1fr 1fr 1fr;
   margin-top: 1.5em;
 }
 
+.add-recipe {
+  cursor: pointer;
+}
+
 .main-btn {
   text-align: center;
 }
 
-.recipe {
+.recipe, .recipe-that-is-saved {
   text-align: center;
+  align-self: center;
 }
 
 .recipe img {
+  max-width: 100%;
+}
+
+.recipe-that-is-saved img {
   max-width: 100%;
 }
 
