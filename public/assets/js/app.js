@@ -48,13 +48,16 @@ $('#submit').on('click', function(event) {
     for (let i = 0; i < results.length; i++) {
       const recipeDiv = $('<div class="recipe">')
       const mealName = results[i].title;
-      const picture =results[i].image_url;
-      const p = $('<p>').text(mealName);
+      const picture = results[i].image_url;
+      const url = results[i].source_url;
+      // const p = $('<p>').text(mealName);
       const img = $('<img>');
+      const a = $('<br><a>');
 
       img.attr('src', picture);
-
-      recipeDiv.prepend(p);
+      a.attr('href', url);
+      a.attr('target', '_blank').text(mealName);
+      recipeDiv.prepend(a);
       recipeDiv.prepend(img);
       $('#tiles-go-here').prepend(recipeDiv);
     }

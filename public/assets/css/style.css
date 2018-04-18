@@ -19,6 +19,7 @@ li {
   display: grid;
   grid-gap: 50px;
   grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 1.5em;
 }
 
 .main-btn {
@@ -30,7 +31,7 @@ li {
 }
 
 .recipe img {
-  width: 100%;
+  max-width: 100%;
 }
 
 .transparent {
