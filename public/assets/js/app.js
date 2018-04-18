@@ -3,7 +3,7 @@ $('#submit').on('click', function(event) {
   const searchTerm = $('#searchbar').val().trim();
 
   console.log('running');
-  const queryURL = 'http://food2fork.com/api/search?key=7743a1c8012c773852737a26cf2f7c3f&q=' + searchTerm;
+  const queryURL = 'http://food2fork.com/api/search?key=7743a1c8012c773852737a26cf2f7c3f&q=' + searchTerm + '&sort=r';
 
   $.ajax({
     url: queryURL,
