@@ -5,6 +5,10 @@
   <title>Dinner Bell</title>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css'>
+
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css'>
+
   <link rel='stylesheet' href='../public/assets/css/style.css'>
 </head>
 
@@ -23,7 +27,7 @@
           <a href='#'>dinner</a>
         </li>
         <li>
-          <a href='#'>on my dinner jacket</a>
+          <a href='/calendar'>on my dinner jacket</a>
         </li>
         <li>
           <a href='/saved' title='Saved'>'til the dinner bell rings</a>
@@ -33,7 +37,7 @@
         <li><a href="/" class='white-text'>there's</a></li>
         <li class='white-text'><a href="#" class='white-text'>still</a></li>
         <li class='white-text'><a href="#" class='white-text'>dinner</a></li>
-        <li class='white-text'><a href="#" class='white-text'>on my dinner jacket</a></li>
+        <li class='white-text'><a href="/calendar" class='white-text'>on my dinner jacket</a></li>
         <li class='white-text'><a href="/saved" class='white-text'>'til the dinner bell rings</a></li>
       </ul>
     </nav>
@@ -54,7 +58,67 @@
       <div id='tiles-go-here'>
 
       </div>
+          <div class='multiple-items'>
+      <div class='slides'>
+        <img src='http://4.bp.blogspot.com/-QzFApivxE1E/Tj__jO-dORI/AAAAAAAADd4/YOVRcbbQXtY/s1600/IMG_0718.JPG'>
+      </div>
+      <div class='slides'>
+        <img src='https://www.the-girl-who-ate-everything.com/wp-content/uploads/2016/05/banana-pudding-12-732x1024.jpg'>
+      </div>
+      <div class='slides'>
+        <img src='http://farmscapegardens.com/wp-content/uploads/2014/04/two-kittens.jpg'>
+      </div>
+      <div class='slides'>
+        <img src='https://c1.staticflickr.com/1/17/20509305_a2723b24db_b.jpg'>
+      </div>
+      <div class='slides'>
+        <img src='http://www.cbc.ca/natureofthings/content/images/episodes/greatbutterflyhunt_1280.jpg'>
+      </div>
+      <div class='slides'>
+        <img src='https://www.roughguides.com/wp-content/uploads/2012/11/89198357-1680x1050.jpg'>
+      </div>
+      <div class='slides'>
+        <img src='https://www.educationquizzes.com/library/KS1-Science/Living-Things-10.jpg'>
+      </div>
+      <div class='slides'>
+        <img src='https://ih1.redbubble.net/image.9389220.1614/flat,1000x1000,075,f.jpg'>
+      </div>
+      <div class='slides'>
+        <img src='http://az616578.vo.msecnd.net/files/2016/07/02/63603090250166852476760261_635939545350137981-939421680_thoughtcatalog.jpg'>
+      </div>
     </div>
+    </div>
+
+<!--     <div class='multiple-items'>
+      <div class='slides'>
+        <img src='http://4.bp.blogspot.com/-QzFApivxE1E/Tj__jO-dORI/AAAAAAAADd4/YOVRcbbQXtY/s1600/IMG_0718.JPG'>
+      </div>
+      <div class='slides'>
+        <img src='https://www.the-girl-who-ate-everything.com/wp-content/uploads/2016/05/banana-pudding-12-732x1024.jpg'>
+      </div>
+      <div class='slides'>
+        <img src='http://farmscapegardens.com/wp-content/uploads/2014/04/two-kittens.jpg'>
+      </div>
+      <div class='slides'>
+        <img src='https://c1.staticflickr.com/1/17/20509305_a2723b24db_b.jpg'>
+      </div>
+      <div class='slides'>
+        <img src='http://www.cbc.ca/natureofthings/content/images/episodes/greatbutterflyhunt_1280.jpg'>
+      </div>
+      <div class='slides'>
+        <img src='https://www.roughguides.com/wp-content/uploads/2012/11/89198357-1680x1050.jpg'>
+      </div>
+      <div class='slides'>
+        <img src='https://www.educationquizzes.com/library/KS1-Science/Living-Things-10.jpg'>
+      </div>
+      <div class='slides'>
+        <img src='https://ih1.redbubble.net/image.9389220.1614/flat,1000x1000,075,f.jpg'>
+      </div>
+      <div class='slides'>
+        <img src='http://az616578.vo.msecnd.net/files/2016/07/02/63603090250166852476760261_635939545350137981-939421680_thoughtcatalog.jpg'>
+      </div>
+    </div> -->
+
   </main>
 
   <footer class='page-footer black'>
@@ -66,16 +130,19 @@
     </div>
   </footer>
 
-<script
+  <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
-<script src='../public/assets/js/app.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js'></script>
-<script>
-  $(document).ready(function(){
-    $(".button-collapse").sideNav();
-  });
-</script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js'></script>
+  <script src='../public/assets/js/app.js'></script>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js'></script>
+
+  <script>
+    $(document).ready(function(){
+      $(".button-collapse").sideNav();
+    });
+  </script>
 </body>
 </html>

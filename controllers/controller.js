@@ -34,6 +34,10 @@ router.get('/saved', function(req, res) {
   res.sendFile(path.join(__dirname + '/../views/saved.html'));
 });
 
+router.get('/calendar', function(req, res) {
+  res.sendFile(path.join(__dirname + '/../views/calendar.html'));
+});
+
 // router.post('/save/:id', function(req, res) {
 //   db.Meal.
 // });

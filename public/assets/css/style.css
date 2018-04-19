@@ -21,7 +21,7 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
     color: red !important;
 }
 
-li {
+#nav-mobile li {
   background-color: black;
 }
 
@@ -40,12 +40,27 @@ a:hover {
   margin-top: 1.5em;
 }
 
+#calendar-goes-here {
+  display: grid;
+  grid-gap: 0px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  margin-top: 1.5em;
+}
+
+#calendar-goes-here div {
+  min-height: 18vh;
+}
+
 .add-recipe {
   cursor: pointer;
 }
 
 .main-btn {
   text-align: center;
+}
+
+.multiple-items {
+  /*text-align: center;*/
 }
 
 .recipe, .recipe-that-is-saved {
@@ -55,10 +70,47 @@ a:hover {
 
 .recipe img {
   max-width: 100%;
+  border-radius: 10px;
 }
 
 .recipe-that-is-saved img {
   max-width: 100%;
+  border-radius: 10px;
+}
+
+.slick-prev {
+  left: -50px;
+}
+
+.slick-next {
+  right: -50px;
+}
+
+.slick-next, .slick-prev {
+  width: 50px;
+  height: 50px;
+}
+
+.slick-next:before, .slick-prev:before {
+  color: red;
+  font-size: 40px;
+  width: 50px;
+  height: 50px;
+}
+
+.slick-slide {
+  align-self: center;
+  text-align: center;
+}
+
+.slides {
+  text-align: center;
+  align-self: center;
+  padding: 10px;
+}
+
+.slides img {
+  width: 100%;
 }
 
 .transparent {

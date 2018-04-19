@@ -36,6 +36,7 @@ $('#submit').on('click', function(event) {
 
 });
 
+
 // function colorChange(event) {
 //   event.preventDefault();
 //   // console.log('i get here...');
@@ -57,10 +58,9 @@ $('#submit').on('click', function(event) {
 
 // $(document).on("click", ".add-recipe", colorChange);
 $(document).ready(function() {
-  // renderSavedRecipes();
 
-  // function renderSavedRecipes() {
     $('#saved-recipes').empty();
+
     $.getJSON('/api/meals', function(data) {
       for (let i = 0; i < data.length; i++) {
         const savePanel = $('<div class="recipe-that-is-saved"><img src="' + data[i].image_url + '"><br><a href="' + data[i].source_url + '" target=_blank>' + data[i].name + '</a><br><p>Added by: ' + data[i].addedBy + '</p><p>Meal type: ' + data[i].mealTime + '</p></div>');
@@ -68,6 +68,16 @@ $(document).ready(function() {
         $('#saved-recipes').prepend(savePanel);
         savePanel.data('_id', data._id);
       }
-    })
-  // }
+    });
+
+  $('.multiple-items').slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    dots: true,
+    autoplay: true,
+    autoplaySpeed: 2000
+  });
+
+
 })
