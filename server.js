@@ -29,7 +29,3 @@ app.use('/api', apiRoutes);
 
 
 app.listen(PORT, () => console.log(`listening on port ${PORT}!!!!`));
-
-//needs some API calls to a recipe API
-//save in MongoDB
-//filter according to who added
