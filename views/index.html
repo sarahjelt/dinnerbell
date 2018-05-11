@@ -58,66 +58,36 @@
       <div id='tiles-go-here'>
 
       </div>
-          <div class='multiple-items'>
-      <div class='slides'>
-        <img src='http://4.bp.blogspot.com/-QzFApivxE1E/Tj__jO-dORI/AAAAAAAADd4/YOVRcbbQXtY/s1600/IMG_0718.JPG'>
-      </div>
-      <div class='slides'>
-        <img src='https://www.the-girl-who-ate-everything.com/wp-content/uploads/2016/05/banana-pudding-12-732x1024.jpg'>
-      </div>
-      <div class='slides'>
-        <img src='http://farmscapegardens.com/wp-content/uploads/2014/04/two-kittens.jpg'>
-      </div>
-      <div class='slides'>
-        <img src='https://c1.staticflickr.com/1/17/20509305_a2723b24db_b.jpg'>
-      </div>
-      <div class='slides'>
-        <img src='http://www.cbc.ca/natureofthings/content/images/episodes/greatbutterflyhunt_1280.jpg'>
-      </div>
-      <div class='slides'>
-        <img src='https://www.roughguides.com/wp-content/uploads/2012/11/89198357-1680x1050.jpg'>
-      </div>
-      <div class='slides'>
-        <img src='https://www.educationquizzes.com/library/KS1-Science/Living-Things-10.jpg'>
-      </div>
-      <div class='slides'>
-        <img src='https://ih1.redbubble.net/image.9389220.1614/flat,1000x1000,075,f.jpg'>
-      </div>
-      <div class='slides'>
-        <img src='http://az616578.vo.msecnd.net/files/2016/07/02/63603090250166852476760261_635939545350137981-939421680_thoughtcatalog.jpg'>
+      <div class='multiple-items'>
+        <div class='slides'>
+          <img src='http://4.bp.blogspot.com/-QzFApivxE1E/Tj__jO-dORI/AAAAAAAADd4/YOVRcbbQXtY/s1600/IMG_0718.JPG'>
+        </div>
+        <div class='slides'>
+          <img src='https://www.the-girl-who-ate-everything.com/wp-content/uploads/2016/05/banana-pudding-12-732x1024.jpg'>
+        </div>
+        <div class='slides'>
+          <img src='http://farmscapegardens.com/wp-content/uploads/2014/04/two-kittens.jpg'>
+        </div>
+        <div class='slides'>
+          <img src='https://c1.staticflickr.com/1/17/20509305_a2723b24db_b.jpg'>
+        </div>
+        <div class='slides'>
+          <img src='http://www.cbc.ca/natureofthings/content/images/episodes/greatbutterflyhunt_1280.jpg'>
+        </div>
+        <div class='slides'>
+          <img src='https://www.roughguides.com/wp-content/uploads/2012/11/89198357-1680x1050.jpg'>
+        </div>
+        <div class='slides'>
+          <img src='https://www.educationquizzes.com/library/KS1-Science/Living-Things-10.jpg'>
+        </div>
+        <div class='slides'>
+          <img src='https://ih1.redbubble.net/image.9389220.1614/flat,1000x1000,075,f.jpg'>
+        </div>
+        <div class='slides'>
+          <img src='http://az616578.vo.msecnd.net/files/2016/07/02/63603090250166852476760261_635939545350137981-939421680_thoughtcatalog.jpg'>
+        </div>
       </div>
     </div>
-    </div>
-
-<!--     <div class='multiple-items'>
-      <div class='slides'>
-        <img src='http://4.bp.blogspot.com/-QzFApivxE1E/Tj__jO-dORI/AAAAAAAADd4/YOVRcbbQXtY/s1600/IMG_0718.JPG'>
-      </div>
-      <div class='slides'>
-        <img src='https://www.the-girl-who-ate-everything.com/wp-content/uploads/2016/05/banana-pudding-12-732x1024.jpg'>
-      </div>
-      <div class='slides'>
-        <img src='http://farmscapegardens.com/wp-content/uploads/2014/04/two-kittens.jpg'>
-      </div>
-      <div class='slides'>
-        <img src='https://c1.staticflickr.com/1/17/20509305_a2723b24db_b.jpg'>
-      </div>
-      <div class='slides'>
-        <img src='http://www.cbc.ca/natureofthings/content/images/episodes/greatbutterflyhunt_1280.jpg'>
-      </div>
-      <div class='slides'>
-        <img src='https://www.roughguides.com/wp-content/uploads/2012/11/89198357-1680x1050.jpg'>
-      </div>
-      <div class='slides'>
-        <img src='https://www.educationquizzes.com/library/KS1-Science/Living-Things-10.jpg'>
-      </div>
-      <div class='slides'>
-        <img src='https://ih1.redbubble.net/image.9389220.1614/flat,1000x1000,075,f.jpg'>
-      </div>
-      <div class='slides'>
-        <img src='http://az616578.vo.msecnd.net/files/2016/07/02/63603090250166852476760261_635939545350137981-939421680_thoughtcatalog.jpg'>
-      </div>
-    </div> -->
 
   </main>
 
@@ -142,7 +112,16 @@
   <script>
     $(document).ready(function(){
       $(".button-collapse").sideNav();
+
+      // $(".multiple-items").slick("slickAdd", "<div class='slides'><img src='" +  + "'></div>")
     });
+  </script>
+  <script type="text/javascript">
+    function itsToasted() {
+      Materialize.toast("Recipe saved!", 4000)
+    }
+
+    $(document).on("click", ".add-recipe", itsToasted);
   </script>
 </body>
 </html>

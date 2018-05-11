@@ -57,10 +57,15 @@ a:hover {
 
 .main-btn {
   text-align: center;
+  margin-bottom: 30px;
 }
 
 .multiple-items {
-  /*text-align: center;*/
+  margin-top: 30px;
+}
+
+.page-footer {
+  margin-top: 30px;
 }
 
 .recipe, .recipe-that-is-saved {

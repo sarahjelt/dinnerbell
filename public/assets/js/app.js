@@ -15,20 +15,22 @@ $('#submit').on('click', function(event) {
     console.log(results);
 
     for (let i = 0; i < results.length; i++) {
-      const recipeDiv = $('<div class="recipe">')
+      const recipeDiv = $('<div class="recipe">');
+      const idd = results[i].recipe_id
       const mealName = results[i].title;
       const picture = results[i].image_url;
       const url = results[i].source_url;
-      const img = $('<img>');
-      const a = $('<br><a>');
-      const iconButton = '<br><a href="/save"><i class="add-recipe medium material-icons waves-effect waves-light">add_circle</i></a>'
+      const img = $('<img data-id="' + idd + '">');
+      const a = $('<a>');
+      const iconButton = '<br><a href="#"><i class="add-recipe medium material-icons waves-effect waves-light" data-id="' + idd + '">add_circle</i></a>'
 
       img.attr('src', picture);
       a.attr('href', url);
+      a.attr('data-id', idd)
       a.attr('target', '_blank').text(mealName);
 
       recipeDiv.prepend(iconButton);
-      recipeDiv.prepend(a);
+      recipeDiv.prepend('<br>', a);
       recipeDiv.prepend(img);
       $('#tiles-go-here').prepend(recipeDiv);
     }
@@ -37,26 +39,49 @@ $('#submit').on('click', function(event) {
 });
 
 
+
 // function colorChange(event) {
 //   event.preventDefault();
 //   // console.log('i get here...');
 //   $(this).addClass('red-text');
 // }
 
-// function saveRecipe() {
-//   //const recSave = $(this).
+function saveRecipe(event) {
+  event.preventDefault();
 
-//   $.ajax({
-//     method: 'POST',
-//     url: '/save/' + recSave,
-//     data: {
-//       saved: true
-//     }
-//   })
-//   //.then()
-// };
+  const mealId = $(this).attr('data-id');
+  const colorChange = $(this).addClass('grey-text');
+  const stepthenext = $(`a[data-id='${mealId}']`);
+  const stepthenexteth = $(`img[data-id='${mealId}']`);
+  const mealName = stepthenext.text();
+  const image_url = stepthenexteth.attr('src');
+  const source_url = stepthenext.attr('href');
 
-// $(document).on("click", ".add-recipe", colorChange);
+  // console.log(mealId);
+  // console.log(mealName);
+
+  // $.ajax({
+  //   method: 'GET',
+  //   url: '/save'
+  // })
+  // .then()
+
+    $.ajax({
+    method: 'POST',
+    url: '/save',
+    data: {
+      name: mealName,
+      mealTime: 'test',
+      addedBy: 'Sara Test',
+      day: 'test',
+      image_url: image_url,
+      source_url: source_url
+    }
+  })
+  // .then()
+}
+
+
 $(document).ready(function() {
 
     $('#saved-recipes').empty();
@@ -79,5 +104,7 @@ $(document).ready(function() {
     autoplaySpeed: 2000
   });
 
+});
 
-})
+$(document).on("click", ".add-recipe", saveRecipe);
+
