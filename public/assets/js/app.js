@@ -1,5 +1,6 @@
 $('#submit').on('click', function(event) {
   event.preventDefault();
+  $("#tiles-go-here").empty();
   const searchTerm = $('#searchbar').val().trim();
 
   console.log('running');
@@ -39,13 +40,6 @@ $('#submit').on('click', function(event) {
 });
 
 
-
-// function colorChange(event) {
-//   event.preventDefault();
-//   // console.log('i get here...');
-//   $(this).addClass('red-text');
-// }
-
 function saveRecipe(event) {
   event.preventDefault();
 
@@ -56,15 +50,6 @@ function saveRecipe(event) {
   const mealName = stepthenext.text();
   const image_url = stepthenexteth.attr('src');
   const source_url = stepthenext.attr('href');
-
-  // console.log(mealId);
-  // console.log(mealName);
-
-  // $.ajax({
-  //   method: 'GET',
-  //   url: '/save'
-  // })
-  // .then()
 
     $.ajax({
     method: 'POST',
@@ -83,26 +68,24 @@ function saveRecipe(event) {
 
 
 $(document).ready(function() {
-
+    $('.multiple-items').slick({
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      dots: true,
+      autoplay: true,
+      autoplaySpeed: 2000
+    });
     $('#saved-recipes').empty();
 
     $.getJSON('/api/meals', function(data) {
       for (let i = 0; i < data.length; i++) {
         const savePanel = $('<div class="recipe-that-is-saved"><img src="' + data[i].image_url + '"><br><a href="' + data[i].source_url + '" target=_blank>' + data[i].name + '</a><br><p>Added by: ' + data[i].addedBy + '</p><p>Meal type: ' + data[i].mealTime + '</p></div>');
-
         $('#saved-recipes').prepend(savePanel);
         savePanel.data('_id', data._id);
+        $('.multiple-items').slick('slickAdd', '<div class="slides"><img src="' + data[i].image_url + '"></div>')
       }
     });
-
-  $('.multiple-items').slick({
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    dots: true,
-    autoplay: true,
-    autoplaySpeed: 2000
-  });
 
 });
 

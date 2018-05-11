@@ -4,12 +4,17 @@ const path = require('path');
 const cors = require('cors');
 const db = require('../models');
 const app = express();
+const mealsController = require("./mealsController");
 const bodyParser = require('body-parser');
 // app.use(cors());
 
 router.get('/', function(req, res) {
   res.sendFile(path.join(__dirname + '/../views/index.html'));
 });
+
+router
+  .route('/')
+  .get(mealsController.findAllMeals);
 
 router.post('/save', function(req, res) {
   const result = req.body;
