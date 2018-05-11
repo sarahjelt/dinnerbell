@@ -21,8 +21,24 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
     color: red !important;
 }
 
-#nav-mobile li {
+#nav-mobile li, #mobile li {
   background-color: black;
+  color: white;
+}
+
+#mobile li:hover {
+  background-color: white;
+  color: black;
+}
+
+.side-nav li a:hover {
+  background-color: white;
+  color: black;
+}
+
+.side-nav li a {
+  background-color: black;
+  color: white;
 }
 
 a {

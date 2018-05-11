@@ -6,7 +6,6 @@ const mongoose = require('mongoose');
 const db = require('./models');
 
 const PORT = process.env.PORT || 3000;
-
 const app = express();
 
 app.use(cors());
@@ -26,6 +25,5 @@ const apiRoutes = require('./controllers/apicontroller.js');
 
 app.use('/', routes);
 app.use('/api', apiRoutes);
-
 
 app.listen(PORT, () => console.log(`listening on port ${PORT}!!!!`));
