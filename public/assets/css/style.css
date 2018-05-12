@@ -21,6 +21,23 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
     color: red !important;
 }
 
+nav .brand-logo {
+  color: black;
+}
+
+nav a:hover {
+  color: red;
+}
+
+#tiles-go-here a {
+  color: red;
+}
+
+#tiles-go-here a:hover {
+  color: aqua;
+}
+
+
 #nav-mobile li, #mobile li {
   background-color: black;
   color: white;
@@ -39,14 +56,6 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
 .side-nav li a {
   background-color: black;
   color: white;
-}
-
-a {
-  color: red;
-}
-
-a:hover {
-  color: aqua;
 }
 
 #tiles-go-here, #saved-recipes {
