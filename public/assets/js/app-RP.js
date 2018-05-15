@@ -4,7 +4,7 @@ $('#submit').on('click', function(event) {
   const searchTerm = $('#searchbar').val().trim();
 
   console.log('running');
-  const queryURL = 'https://cors-anywhere.herokuapp.com/https://food2fork.com/api/search?key=7743a1c8012c773852737a26cf2f7c3f&q=' + searchTerm + '&sort=r';
+  const queryURL = 'http://www.recipepuppy.com/api/?&q=' + searchTerm;
 
   $.ajax({
     url: queryURL,
@@ -12,22 +12,22 @@ $('#submit').on('click', function(event) {
     method: "GET"
   })
   .done(function(response) {
-    var results = response.recipes;
+    var results = response.results;
     console.log(results);
 
     for (let i = 0; i < results.length; i++) {
       const recipeDiv = $('<div class="recipe">');
-      const idd = results[i].recipe_id
+      // const idd = results[i].recipe_id
       const mealName = results[i].title;
-      const picture = results[i].image_url;
-      const url = results[i].source_url;
-      const img = $('<img data-id="' + idd + '">');
+      const picture = results[i].thumbnail;
+      const url = results[i].href;
+      const img = $('<img>');
       const a = $('<a>');
-      const iconButton = '<br><a href="#"><i class="add-recipe medium material-icons waves-effect waves-light" data-id="' + idd + '">add_circle</i></a>'
+      const iconButton = '<br><a href="#"><i class="add-recipe medium material-icons waves-effect waves-light">add_circle</i></a>'
 
       img.attr('src', picture);
       a.attr('href', url);
-      a.attr('data-id', idd)
+      // a.attr('data-id', idd)
       a.attr('target', '_blank').text(mealName);
 
       recipeDiv.prepend(iconButton);
@@ -43,7 +43,7 @@ $('#submit').on('click', function(event) {
 function saveRecipe(event) {
   event.preventDefault();
 
-  const mealId = $(this).attr('data-id');
+  // const mealId = $(this).attr('data-id');
   const colorChange = $(this).addClass('grey-text');
   const stepthenext = $(`a[data-id='${mealId}']`);
   const stepthenexteth = $(`img[data-id='${mealId}']`);

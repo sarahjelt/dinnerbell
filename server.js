@@ -1,14 +1,11 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const cors = require('cors');
 const mongoose = require('mongoose');
 
 const db = require('./models');
 
 const PORT = process.env.PORT || 3000;
 const app = express();
-
-app.use(cors());
 
 const MONGODB_URI = process.env.MONGODB_URI || 
 'mongodb://localhost:27017/dinnerbell';
@@ -26,4 +23,7 @@ const apiRoutes = require('./controllers/apicontroller.js');
 app.use('/', routes);
 app.use('/api', apiRoutes);
 
+
+//server start
 app.listen(PORT, () => console.log(`listening on port ${PORT}!!!!`));
+
