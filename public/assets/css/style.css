@@ -32,7 +32,19 @@ nav .brand-logo {
 }
 
 nav a:hover {
-  color: red;
+  color: white;
+}
+
+nav li a {
+  color: black;
+}
+
+nav .active a:hover {
+  color: white;
+}
+
+nav {
+  -webkit-box-shadow: none;
 }
 
 h1 {
@@ -61,13 +73,29 @@ p {
   color: #26a69a;
 }
 
-#nav-mobile li, #mobile li {
-  background-color: black;
+/*navbar active/hover stuff*/
+.active {
+  background-color: black !important;
+}
+
+.active a {
   color: white;
 }
 
-#mobile li:hover {
+.active:hover {
+  background-color: #26a69a !important;
+  opacity: 1;
+  color: black !important;
+}
+
+#nav-mobile li, #mobile li {
+  /*background-color: black;*/
+  color: black !important;
+}
+
+#mobile li:hover, #nav-mobile li:hover {
   background-color: #26a69a;
+  color: white;
 }
 
 .saved-link {
@@ -85,8 +113,8 @@ p {
 }
 
 .side-nav li a {
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
 }
 
 #tiles-go-here, #saved-recipes {
@@ -103,10 +131,10 @@ p {
   grid-gap: 0px;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   margin-top: 1.5em;
-}
+}*/
 
-#calendar-goes-here div {
-  min-height: 18vh;
+/*#calendar-goes-here div {
+  max-height: 85vh;
 }*/
 
 /*table {
