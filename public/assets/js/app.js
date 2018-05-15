@@ -68,6 +68,17 @@ function saveRecipe(event) {
 
 
 $(document).ready(function() {
+
+  if (window.innerWidth < 550) {
+    $('.multiple-items').slick({
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      dots: true,
+      autoplay: true,
+      autoplaySpeed: 2000
+    });
+  } else {
     $('.multiple-items').slick({
       infinite: true,
       slidesToShow: 3,
@@ -76,14 +87,16 @@ $(document).ready(function() {
       autoplay: true,
       autoplaySpeed: 2000
     });
+  }
+
     $('#saved-recipes').empty();
 
     $.getJSON('/api/meals', function(data) {
       for (let i = 0; i < data.length; i++) {
-        const savePanel = $('<div class="recipe-that-is-saved"><img class="saved-photo" src="' + data[i].image_url + '"><br><a href="' + data[i].source_url + '" target=_blank>' + data[i].name + '</a><br><p>Added by: ' + data[i].addedBy + '</p><p>Meal type: ' + data[i].mealTime + '</p></div>');
+        const savePanel = $('<div class="recipe-that-is-saved"><a href="' + data[i].source_url + '" target="_blank"><img class="saved-photo" src="' + data[i].image_url + '"></a><br><a class="saved-link" href="' + data[i].source_url + '" target=_blank>' + data[i].name + '</a><br><p>Added by: ' + data[i].addedBy + '</p><p>Meal type: ' + data[i].mealTime + '</p></div>');
         $('#saved-recipes').prepend(savePanel);
         savePanel.data('_id', data._id);
-        $('.multiple-items').slick('slickAdd', '<div class="slides"><img src="' + data[i].image_url + '"></div>')
+        $('.multiple-items').slick('slickAdd', '<div class="slides"><a href="' + data[i].source_url + '" target="_blank"><img src="' + data[i].image_url + '"></a></div>')
       }
     });
 

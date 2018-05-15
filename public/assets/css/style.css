@@ -2,6 +2,7 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  font-family: 'Open Sans', sans-serif;
 }
 
 main {
@@ -10,23 +11,36 @@ main {
 
 input::-webkit-input-placeholder { /* WebKit browsers */
   color: red !important;
+  font-style: italic;
 }
 input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-    color: red !important;
+  color: red !important;
+  font-style: italic;
 }
 input::-moz-placeholder { /* Mozilla Firefox 19+ */
-    color: red !important;
+  color: red !important;
+  font-style: italic;
 }
 input:-ms-input-placeholder { /* Internet Explorer 10+ */
-    color: red !important;
+  color: red !important;
+  font-style: italic;
 }
 
 nav .brand-logo {
   color: black;
+  font-family: 'Permanent Marker', cursive;
 }
 
 nav a:hover {
   color: red;
+}
+
+h1 {
+  font-family: 'Permanent Marker', cursive;
+}
+
+h2 {
+  font-size: 40px;
 }
 
 p {
@@ -34,14 +48,18 @@ p {
   margin-bottom: 0;
 }
 
+
 #tiles-go-here a {
   color: red;
 }
 
 #tiles-go-here a:hover {
-  color: aqua;
+  color: #26a69a;
 }
 
+.footer-link {
+  color: #26a69a;
+}
 
 #nav-mobile li, #mobile li {
   background-color: black;
@@ -49,8 +67,16 @@ p {
 }
 
 #mobile li:hover {
-  background-color: white;
-  color: black;
+  background-color: #26a69a;
+}
+
+.saved-link {
+  color: red;
+  font-weight: 600;
+}
+
+.saved-link:hover {
+  color: #26a69a;
 }
 
 .side-nav li a:hover {
@@ -92,6 +118,8 @@ p {
 
 .multiple-items {
   margin-top: 30px;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
 .page-footer {
@@ -154,4 +182,27 @@ p {
 
 .transparent {
   background-color: RGBA(255, 255, 255, 0.2);
+}
+
+
+@media only screen and (max-width: 992px) {
+  #saved-recipes {
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 1.5em;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  h1 {
+    font-size: 50px;
+  }
+
+  #saved-recipes {
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: 1fr;
+    margin-top: 1.5em;
+  }
 }
