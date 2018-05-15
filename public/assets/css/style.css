@@ -96,7 +96,9 @@ p {
   margin-top: 1.5em;
 }
 
-#calendar-goes-here {
+/*CALENDAR SHIT*/
+
+/*#calendar-goes-here {
   display: grid;
   grid-gap: 0px;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -105,7 +107,30 @@ p {
 
 #calendar-goes-here div {
   min-height: 18vh;
+}*/
+
+/*table {
+  border: none;
 }
+
+table.fc-right {
+  height: 100%;
+}
+
+td.fc-head-container.fc-widget-header {
+  height: 1.5em;
+  border: none;
+  background-color: red !important;
+  color: white;
+}
+
+.fc-day-top {
+  height: 1.5em;
+}
+
+td {
+  height: 10vh;
+}*/
 
 .add-recipe {
   cursor: pointer;
