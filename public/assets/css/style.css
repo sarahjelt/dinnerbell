@@ -29,6 +29,11 @@ nav a:hover {
   color: red;
 }
 
+p {
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
 #tiles-go-here a {
   color: red;
 }
@@ -106,6 +111,10 @@ nav a:hover {
 .recipe-that-is-saved img {
   max-width: 100%;
   border-radius: 10px;
+}
+
+.saved-photo {
+  margin-bottom: 10px;
 }
 
 .slick-prev {

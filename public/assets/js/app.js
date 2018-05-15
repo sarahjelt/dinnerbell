@@ -80,7 +80,7 @@ $(document).ready(function() {
 
     $.getJSON('/api/meals', function(data) {
       for (let i = 0; i < data.length; i++) {
-        const savePanel = $('<div class="recipe-that-is-saved"><img src="' + data[i].image_url + '"><br><a href="' + data[i].source_url + '" target=_blank>' + data[i].name + '</a><br><p>Added by: ' + data[i].addedBy + '</p><p>Meal type: ' + data[i].mealTime + '</p></div>');
+        const savePanel = $('<div class="recipe-that-is-saved"><img class="saved-photo" src="' + data[i].image_url + '"><br><a href="' + data[i].source_url + '" target=_blank>' + data[i].name + '</a><br><p>Added by: ' + data[i].addedBy + '</p><p>Meal type: ' + data[i].mealTime + '</p></div>');
         $('#saved-recipes').prepend(savePanel);
         savePanel.data('_id', data._id);
         $('.multiple-items').slick('slickAdd', '<div class="slides"><img src="' + data[i].image_url + '"></div>')
