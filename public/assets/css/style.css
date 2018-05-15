@@ -31,6 +31,10 @@ nav .brand-logo {
   font-family: 'Permanent Marker', cursive;
 }
 
+nav .brand-logo:hover {
+  color: #26a69a;
+}
+
 nav a:hover {
   color: white;
 }
@@ -39,12 +43,30 @@ nav li a {
   color: black;
 }
 
-nav .active a:hover {
+nav #nav-mobile li {
+  margin: 0 5px 0 5px;
+}
+
+nav ul#nav-mobile a:hover {
+  background-color: rgba(0,0,0,0);
+  border-radius: 50%;
+}
+
+nav #nav-mobile.active a:hover {
   color: white;
+}
+
+nav #mobile.active a {
+  background-color: black;
+}
+
+nav #mobile.active a {
+  background-color: black;
 }
 
 nav {
   -webkit-box-shadow: none;
+  margin-top: 10px;
 }
 
 h1 {
@@ -73,6 +95,10 @@ p {
   color: #26a69a;
 }
 
+.footer-link:hover {
+  opacity: 0.7;
+}
+
 /*navbar active/hover stuff*/
 .active {
   background-color: black !important;
@@ -85,15 +111,22 @@ p {
 .active:hover {
   background-color: #26a69a !important;
   opacity: 1;
-  color: black !important;
 }
 
-#nav-mobile li, #mobile li {
-  /*background-color: black;*/
-  color: black !important;
+/*#mobile .active {
+  background-color: black;
 }
 
-#mobile li:hover, #nav-mobile li:hover {
+.side-nav li:hover {
+  
+}*/
+
+#nav-mobile li {
+  color: black !important;
+  border-radius: 8px;
+}
+
+#nav-mobile li:hover {
   background-color: #26a69a;
   color: white;
 }
@@ -108,8 +141,23 @@ p {
 }
 
 .side-nav li a:hover {
-  background-color: white;
-  color: black;
+  background-color: #26a69a;
+  color: white;
+}
+
+.side-nav li.active a {
+  background-color: black;
+  color: white;
+}
+
+.side-nav li.active a:hover {
+  background-color: #26a69a;
+  color: white;
+}
+
+.sidenav>li>a {
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .side-nav li a {
