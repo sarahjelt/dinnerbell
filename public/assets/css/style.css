@@ -26,49 +26,6 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
   font-style: italic;
 }
 
-nav .brand-logo {
-  color: black;
-  font-family: 'Permanent Marker', cursive;
-}
-
-nav .brand-logo:hover {
-  color: #26a69a;
-}
-
-nav a:hover {
-  color: white;
-}
-
-nav li a {
-  color: black;
-}
-
-nav #nav-mobile li {
-  margin: 0 5px 0 5px;
-}
-
-nav ul#nav-mobile a:hover {
-  background-color: rgba(0,0,0,0);
-  border-radius: 50%;
-}
-
-nav #nav-mobile.active a:hover {
-  color: white;
-}
-
-nav #mobile.active a {
-  background-color: black;
-}
-
-nav #mobile.active a {
-  background-color: black;
-}
-
-nav {
-  -webkit-box-shadow: none;
-  margin-top: 10px;
-}
-
 h1 {
   font-family: 'Permanent Marker', cursive;
 }
@@ -81,7 +38,6 @@ p {
   margin-top: 5px;
   margin-bottom: 0;
 }
-
 
 #tiles-go-here a {
   color: red;
@@ -108,27 +64,53 @@ p {
   color: white;
 }
 
-.active:hover {
-  background-color: #26a69a !important;
-  opacity: 1;
-}
-
-/*#mobile .active {
-  background-color: black;
-}
-
-.side-nav li:hover {
-  
-}*/
-
 #nav-mobile li {
   color: black !important;
   border-radius: 8px;
 }
 
-#nav-mobile li:hover {
-  background-color: #26a69a;
+nav .brand-logo {
+  color: black;
+  font-family: 'Permanent Marker', cursive;
+}
+
+nav .brand-logo:hover {
+  color: #26a69a;
+}
+
+nav ul#nav-mobile a:hover {
+  background-color: rgba(0,0,0,0);
   color: white;
+}
+
+nav #nav-mobile.active a:hover {
+  color: white;
+}
+
+.side-nav li.active a:hover, .side-nav li a:hover, #nav-mobile li:hover, .active:hover {
+  background-color: #26a69a !important;
+  color: white;
+}
+
+nav li a {
+  color: black;
+}
+
+nav #nav-mobile li {
+  margin: 0 5px 0 5px;
+}
+
+nav #mobile.active a {
+  background-color: black;
+}
+
+nav #mobile.active a {
+  background-color: black;
+}
+
+nav {
+  -webkit-box-shadow: none;
+  margin-top: 10px;
 }
 
 .saved-link {
@@ -140,18 +122,8 @@ p {
   color: #26a69a;
 }
 
-.side-nav li a:hover {
-  background-color: #26a69a;
-  color: white;
-}
-
 .side-nav li.active a {
   background-color: black;
-  color: white;
-}
-
-.side-nav li.active a:hover {
-  background-color: #26a69a;
   color: white;
 }
 
@@ -165,6 +137,14 @@ p {
   color: black;
 }
 
+.right {
+  padding-right: 20px;
+}
+
+nav i {
+  font-size: 30px !important;
+}
+
 #tiles-go-here, #saved-recipes {
   display: grid;
   grid-gap: 50px;
@@ -173,17 +153,6 @@ p {
 }
 
 /*CALENDAR SHIT*/
-
-/*#calendar-goes-here {
-  display: grid;
-  grid-gap: 0px;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  margin-top: 1.5em;
-}*/
-
-/*#calendar-goes-here div {
-  max-height: 85vh;
-}*/
 
 /*table {
   border: none;
